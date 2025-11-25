@@ -54,8 +54,9 @@ function charCount2(str) {
   const obj = {};
 
   for (let char of str) {
-    char = char.toLowerCase();
-    if (/[a-z0-9]/.test(char)) {
+    // if (/[a-z0-9]/.test(char))
+    if (isAlphaNumeric(char)) {
+      char = char.toLowerCase();
       obj[char] = ++obj[char] || 1;
     }
   }
