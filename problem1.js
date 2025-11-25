@@ -47,4 +47,23 @@ function charCount(str) {
   //return object at end
   return result;
 }
+
+//Refactor
+
+function charCount2(str) {
+  const obj = {};
+
+  for (let char of str) {
+    char = char.toLowerCase();
+    if (/[a-z0-9]/.test(char)) {
+      obj[char] = ++obj[char] || 1;
+    }
+  }
+  return obj;
+}
 console.log(charCount("Hi there!"));
+
+//instead of using regex we can use character codes
+//0-9 = 48-57
+//a-z = 97-122
+//A-Z = 65-90
