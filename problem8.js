@@ -7,10 +7,10 @@
 
 // Sample Input:
 
-sameFrequency(182, 281); // true
-sameFrequency(34, 14); // false
-sameFrequency(3589578, 5879385); // true
-sameFrequency(22, 222); // false
+// sameFrequency(182, 281); // true
+// sameFrequency(34, 14); // false
+// sameFrequency(3589578, 5879385); // true
+// sameFrequency(22, 222); // false
 
 function sameFrequency(n1, n2) {
   let freq = {};
@@ -22,15 +22,9 @@ function sameFrequency(n1, n2) {
   for (let item of n2.toString().split("")) {
     freq1[item] = (freq1[item] || 0) + 1;
   }
-  console.log("freq", freq);
-  console.log("freq1", freq1);
-  for (let value in freq) {
-    console.log(value);
-    if (!(value in freq1)) {
-      return false;
-    }
 
-    if (!(freq[value] == freq1[value])) {
+  for (let value in freq) {
+    if (!(value in freq1)) {
       return false;
     }
   }
