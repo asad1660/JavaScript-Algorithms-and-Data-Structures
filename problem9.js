@@ -8,7 +8,11 @@
 // areThereDuplicates('a', 'b', 'c', 'a') // true
 
 function areThereDuplicates(...args) {
-  args = args.sort((a, b) => a - b);
+  args = args.sort((a, b) => {
+    if (a < b) return -1;
+    if (a > b) return 1;
+    return 0;
+  });
 
   let start = 0;
   let next = 1;
