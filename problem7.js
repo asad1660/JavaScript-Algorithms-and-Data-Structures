@@ -5,7 +5,7 @@
 // eg: input([1,2,5,2,8,1,5],4) output(17) //because 2+5+2+8 is the largest sum of 4 consecutive numbers
 // eg: input([4,2,1,6],1) output(6) //because 6 is the largest sum of 1 consecutive numbers
 // eg: input([],4) output(null) //because there are not enough elements in the array
-
+//sliding window pattern
 function maxSumArray(arr, n) {
   let temp = 0;
   let max = 0;
