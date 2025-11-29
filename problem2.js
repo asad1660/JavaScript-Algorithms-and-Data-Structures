@@ -48,6 +48,9 @@
 //because of the nested loop , if 1000items in a1 it will have to run 1000*1000 times in worst case
 
 function same(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
   const freq1 = {};
   const freq2 = {};
   for (let item of arr1) {
