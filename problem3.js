@@ -11,7 +11,9 @@ function validAnagram(str1, str2) {
   //in the string no spaces or special character or numbers
   //breakdown the problem
   //we will create dictonary of each character appear how many times and then tell if its same
-
+  if (str1.length !== str2.length) {
+    return false;
+  }
   const freq1 = {};
   const freq2 = {};
 
