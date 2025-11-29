@@ -6,23 +6,41 @@
 
 //the lengths of the arrays must be the same
 
-function same(a1, a2) {
-  const copy = [];
-  for (let item of a1) {
-    let correctValue = a2.find((e) => e == item ** 2);
-    if (correctValue == undefined) {
-      return false;
-    } else {
-      copy.push(correctValue);
-    }
-  }
+// function same(a1, a2) {
+//   const copy = [];
+//   for (let item of a1) {
+//     let correctValue = a2.find((e) => e == item ** 2);
+//     if (correctValue == undefined) {
+//       return false;
+//     } else {
+//       copy.push(correctValue);
+//     }
+//   }
 
-  if (a1.length == copy.length) {
-    return true;
-  }
-  {
+//   if (a1.length == copy.length) {
+//     return true;
+//   }
+//   {
+//     return false;
+//   }
+// }
+
+// console.log(same([1, 2, 3], [1, 4, 9]));
+
+// the issue with the above solution is the edge case where same frequency is not maintained
+//eg: input([1,2,3,2]) output([1,4,9,1]) //false (must be same frequency)
+
+function same(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
     return false;
   }
+  for (let i = 0; i < arr1.length; i++) {
+    let correctIndex = arr2.indexOf(arr1[i] ** 2);
+    if (correctIndex == -1) {
+      return false;
+    }
+    arr2.splice(correctIndex, 1);
+  }
+  return true;
 }
-
-console.log(same([1, 2, 3], [1, 4, 9]));
+console.log(same([1, 2, 3, 2], [1, 4, 9, 4]));
