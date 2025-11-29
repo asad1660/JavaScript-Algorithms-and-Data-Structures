@@ -62,7 +62,7 @@ function charCount2(str) {
   }
   return obj;
 }
-console.log(charCount("Hi there!"));
+console.log("a".charCodeAt(0)); //97
 
 //instead of using regex we can use character codes
 //0-9 = 48-57
