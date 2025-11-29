@@ -5,6 +5,7 @@
 // eg: "hello" and "bye" are not anagrams
 //uppercase and lowercase are the same
 //no spaces or special character or numbers
+//frequency counter pattern
 
 function validAnagram(str1, str2) {
   // add whatever parameters you deem necessary - good luck!

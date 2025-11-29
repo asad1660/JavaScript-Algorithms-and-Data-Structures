@@ -9,7 +9,7 @@
 //if sum is greater than zero we will move end pointer to left
 //if sum is less than zero we will move start pointer to right
 //we will continue this until start pointer is less than end pointer
-
+//multiple pointers pattern
 function sumZero(arr) {
   console.log("array", arr);
   let left = 0;
