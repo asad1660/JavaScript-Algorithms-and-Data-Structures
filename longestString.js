@@ -1,7 +1,7 @@
 function longestSearch(long, short) {
   var counter = 0;
   for (let i = 0; i < long.length; i++) {
-    for (j = 0; j < short.length; j++) {
+    for (let j = 0; j < short.length; j++) {
       console.log(short[j], long[i + j]);
       if (short[j] !== long[i + j]) {
         console.log("break");

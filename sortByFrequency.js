@@ -13,14 +13,18 @@ function sortByFrequency(arr) {
     });
   }
   console.log(temp);
-  const result = temp.sort((a, b) => {
-    if (a.frequency !== b.frequency) {
-      return b.frequency - a.frequency;
-    } else {
-      return a.index - b.index;
-    }
-  });
-  console.log(result);
-  return result;
+  temp = temp
+    .sort((a, b) => {
+      if (a.frequency == 1 && b.frequency == 1) {
+        return a.val - b.val;
+      } else {
+        return b.frequency - a.frequency;
+      }
+    })
+    .map((ele) => {
+      return ele.val;
+    });
+  console.log(temp.join(" "));
+  return temp;
 }
-console.log(sortByFrequency([4, 4, 5, 5, 6, 2, 3, 3, 3]));
+console.log(sortByFrequency([1, 4, 4, 5, 5, 6, 2, 3, 3, 3]));
