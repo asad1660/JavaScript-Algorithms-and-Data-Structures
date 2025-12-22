@@ -28,3 +28,16 @@ function productOfArray(array) {
 }
 
 console.log(productOfArray([1, 2, 3, 10]));
+
+/* 
+This Example is about recursiveRange of a number add with the previous one until 0 in javascript.
+how we can achieve this by doing recursion
+// SAMPLE INPUT/OUTPUT
+// recursiveRange(6) // 21
+// recursiveRange(10) // 55 
+*/
+function recursiveRange(n) {
+  if (n === 0) return 0;
+  return n + recursiveRange(n - 1);
+}
+console.log(recursiveRange(6));
