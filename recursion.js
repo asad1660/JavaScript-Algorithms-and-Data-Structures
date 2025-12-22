@@ -41,3 +41,18 @@ function recursiveRange(n) {
   return n + recursiveRange(n - 1);
 }
 console.log(recursiveRange(6));
+
+/* 
+This Example is about Fibonacci sequence in javascript.
+how we can achieve this by doing recursion
+// fib(4) // 3
+// fib(10) // 55
+// fib(28) // 317811
+// fib(35) // 9227465
+*/
+
+function fib(n) {
+  if (n <= 1) return n;
+  return fib(n - 1) + fib(n - 2);
+}
+console.log(fib(10));
