@@ -56,3 +56,14 @@ function fib(n) {
   return fib(n - 1) + fib(n - 2);
 }
 console.log(fib(10));
+/* 
+This Example is about reverse string in javascript.
+how we can achieve this by doing recursion
+// reverse('awesome') // 'emosewa'
+// reverse('rithmschool') // 'loohcsmhtir'
+*/
+function reverse(str) {
+  if (str.length <= 1) return str;
+  return reverse(str.slice(1)) + str[0];
+}
+console.log(reverse("awesome"));
