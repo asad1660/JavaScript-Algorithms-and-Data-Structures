@@ -67,3 +67,19 @@ function reverse(str) {
   return reverse(str.slice(1)) + str[0];
 }
 console.log(reverse("awesome"));
+/* 
+This Example is about isPalindrome in javascript.
+how we can achieve this by doing recursion
+// isPalindrome('awesome') // false
+// isPalindrome('foobar') // false
+// isPalindrome('tacocat') // true
+// isPalindrome('amanaplanacanalpanama') // true
+// isPalindrome('amanaplanacanalpandemonium') // false
+*/
+
+function isPalindrome(str) {
+  if (str == reverse(str)) return true;
+  else return false;
+}
+
+console.log(isPalindrome("tacocat"));
